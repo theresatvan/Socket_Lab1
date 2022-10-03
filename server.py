@@ -22,7 +22,6 @@ def webServer(port=6789):
             
             #Fill in start
             connectionSocket.send('HTTP/1.1 200 OK\r\n\r\n'.encode())
-            connectionSocket.send('Content-Type: text/html\n'.encode())
             #Fill in end
             
             # Send the content of the requested file to the client
@@ -44,8 +43,8 @@ def webServer(port=6789):
             connectionSocket.close()
             #Fill in end
     
-        serverSocket.close()
-        sys.exit()  # Terminate the program after sending the corresponding data
+    serverSocket.close()
+    sys.exit()  # Terminate the program after sending the corresponding data
 
 if __name__ == '__main__':
     webServer(6789)
