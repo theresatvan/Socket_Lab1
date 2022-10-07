@@ -16,7 +16,7 @@ def webServer(port=6789):
             message = connectionSocket.recv(1024).decode()  # Read bytes from socket
             filename = message.split()[1]
             
-            print('Client request \n' + message)
+            print('Client request \n', message)
             
             f = open(filename[1:])
             outputdata = f.read()  # Retrieve specified file requested from client
