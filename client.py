@@ -1,8 +1,7 @@
 # import socket module
-from http import client
 from socket import *
 import sys  # In order to terminate the program and receive arguments
-import time
+import time # In order to set timeout function
 
 def webClient(args=sys.argv[0:]):
     try:
@@ -26,7 +25,7 @@ def webClient(args=sys.argv[0:]):
         
     sys.exit()  # Terminate program
 
-# ensures client receives and prints wholre reponse from server
+# ensures client receives and prints whole reponse from server
 def recvAll(clientSocket,timeout=1):
     begin = time.time()
     while True:
